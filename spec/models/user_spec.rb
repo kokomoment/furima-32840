@@ -7,48 +7,48 @@ describe User do
 
   describe 'ユーザー新規登録' do
     context '新規登録がうまくいくとき' do
-      it "nickname、email、password、first_name、last_name、first_name_kana、last_name_kana、birthdayが存在すれば登録できる" do
+      it "nickname、email、password、first_name、last_name、first_name_kana、last_name_kana、birthdayが存在する" do
       end
-      it "passwordが英数字を含む6文字以上であれば登録できる" do
+      it "passwordが英数字を含む6文字以上" do
       end
-      it "first_nameが全角文字であれば登録できる" do
+      it "first_nameが全角文字" do
       end
-      it "last_nameが全角文字であれば登録できる" do
+      it "last_nameが全角文字" do
       end
-      it "first_name_kanaが全角カナであれば登録できる" do
+      it "first_name_kanaが全角カナ" do
       end
-      it "last_name_kanaが全角カナであれば登録できる" do
+      it "last_name_kanaが全角カナ" do
       end
     end
 
     context '新規登録がうまくいかないとき' do
-      it "nicknameが空だと登録できない" do
+      it "nicknameが空" do
       end
-      it "emailが空だと登録できない" do
+      it "emailが空" do
       end
-      it "emailに@がない場合は登録できない" do
+      it "emailに@がない" do
       end
-      it "重複したemailが存在する場合は登録できない" do
+      it "重複したemailが存在する" do
       end
-      it "passwordが空だと登録できない" do
+      it "passwordが空" do
       end
-      it "passwordが5文字以下だと登録できない" do
+      it "passwordが5文字以下" do
       end
-      it "passwordに数字が含まれていないと登録できない" do
+      it "passwordが半角数字のみ" do
       end
-      it "passwordに英字が含まれていないと登録できない" do
+      it "passwordが半角英字のみ" do
       end
-      it "passwordが存在してもpassword_confirmationが空では登録できない" do
+      it "passwordとpassword_confirmationが不一致" do
       end
-      it "first_nameが空だと登録できない" do
+      it "first_nameが空" do
       end
-      it "last_nameが空だと登録できない" do
+      it "last_nameが空" do
       end
-      it "first_name_kanaが空だと登録できない" do
+      it "first_name_kanaが空" do
       end
-      it "last_name_kanaが空だと登録できない" do
+      it "last_name_kanaが空" do
       end
-      it "birthdayが空だと登録できない" do
+      it "birthdayが空" do
       end
     end
   end
