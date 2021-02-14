@@ -89,7 +89,7 @@ describe User do
       it 'first_nameが漢字・平仮名・カタカナ以外' do
         @user.first_name = 'abc'
         @user.valid?
-        expect(@user.errors.full_messages).to include("First name Full-width characters")
+        expect(@user.errors.full_messages).to include('First name Full-width characters')
       end
       it 'last_nameが空' do
         @user.last_name = ''
@@ -99,7 +99,7 @@ describe User do
       it 'last_nameが漢字・平仮名・カタカナ以外' do
         @user.last_name = 'abc'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name Full-width characters")
+        expect(@user.errors.full_messages).to include('Last name Full-width characters')
       end
       it 'first_name_kanaが空' do
         @user.first_name_kana = ''
@@ -109,7 +109,7 @@ describe User do
       it 'first_name_kanaが全角カタカナ以外' do
         @user.first_name_kana = '山田'
         @user.valid?
-        expect(@user.errors.full_messages).to include("First name kana Full-width characters")
+        expect(@user.errors.full_messages).to include('First name kana Full-width characters')
       end
       it 'last_name_kanaが空' do
         @user.last_name_kana = ''
@@ -119,7 +119,7 @@ describe User do
       it 'last_name_kanaが全角カタカナ以外' do
         @user.last_name_kana = '太郎'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name kana Full-width characters")
+        expect(@user.errors.full_messages).to include('Last name kana Full-width characters')
       end
       it 'birthdayが空' do
         @user.birthday = ''
