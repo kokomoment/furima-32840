@@ -76,6 +76,11 @@ describe User do
         @user.valid?
         expect(@user.errors.full_messages).to include('Password Password Include both letters and numbers')
       end
+      it 'passwordに全角文字が含まれる' do
+        @user.password = '12eggたまご'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Password Password Include both letters and numbers')
+      end
       it 'passwordとpassword_confirmationが不一致' do
         @user.password_confirmation = ''
         @user.valid?
