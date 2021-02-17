@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   validates :category_id, :state_id, :ship_fee_id, :prefecture_id, :ship_date_id, numericality: { other_than: 1 }
 
   belongs_to :user
+  has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
