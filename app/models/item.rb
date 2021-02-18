@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
 
   validates :category_id, :state_id, :ship_fee_id, :prefecture_id, :ship_date_id, numericality: { other_than: 1 }
-  with_option presence: true do
+  with_options presence: true do
     validates :product
     validates :explain
     validates :category_id
