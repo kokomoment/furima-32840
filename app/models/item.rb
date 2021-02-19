@@ -12,6 +12,7 @@ class Item < ApplicationRecord
     validates :product
     validates :explain
     validates :price
+    validates :image
   end
 
   validates :price, inclusion: { in: 300..9999999, message: 'Out of settintg range' },
