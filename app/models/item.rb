@@ -1,5 +1,4 @@
 class Item < ApplicationRecord
-  
   with_options numericality: { other_than: 1, message: 'Select' } do
     validates :category_id
     validates :state_id
@@ -15,7 +14,7 @@ class Item < ApplicationRecord
     validates :image
   end
 
-  validates :price, inclusion: { in: 300..9999999, message: 'Out of settintg range' },
+  validates :price, inclusion: { in: 300..9_999_999, message: 'Out of settintg range' },
                     numericality: { message: 'Half-width number' }
 
   belongs_to :user
