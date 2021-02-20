@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe User do
+describe Item do
   before do
-    @user = FactoryBot.build(:user)
+    @item = FactoryBot.build(:item)
   end
 
   describe 'ユーザー新規登録' do
