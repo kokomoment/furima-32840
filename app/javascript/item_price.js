@@ -8,7 +8,6 @@ function priceCalc (){
 
   const profit = document.getElementById('profit');
   profit.innerHTML = Math.floor(inputValue - addTaxDom.innerHTML);
-  console.log(profit.innerHTML);
   });
 }
 
