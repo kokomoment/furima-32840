@@ -15,7 +15,7 @@ class Item < ApplicationRecord
   end
 
   validates :price, inclusion: { in: 300..9_999_999, message: 'Out of settintg range' },
-                    numericality: { message: 'Half-width number' }
+                    numericality: { only_integer: true, message: 'Half-width number' }
 
   belongs_to :user
   has_one_attached :image
