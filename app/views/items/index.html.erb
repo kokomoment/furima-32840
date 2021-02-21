@@ -130,11 +130,11 @@
           <%= link_to '#' do %>  <%#item_path(@item.id)かな？ %>
             <div class='item-img-content'>
               <%= image_tag item.image, class: "item-img" if item.image.attached? %>
-                <%# <% if order.item_id.present? %> %>
+                <%# <% if order.item_id.present? %> 
                   <%# <div class='sold-out'> %>
                     <%# <span>Sold Out!!</span> %>
                   <%# </div> %>
-              <%# <% end %> %>
+              <%# <% end %> 
             </div>
             <div class='item-info'>
               <h3 class='item-name'>
@@ -152,7 +152,7 @@
         </li>
       <% end %>
 
-      <%# <% if @items.empty? %>
+      <% if @items.empty? %>
         <li class='list'>
           <%= link_to '#' do %>
           <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
@@ -170,7 +170,7 @@
           </div>
           <% end %>
         </li>
-      <%# <% end %>
+      <% end %>
     </ul>
   </div>
   <%# /商品一覧 %>
