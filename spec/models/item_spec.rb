@@ -70,18 +70,28 @@ describe Item do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
-      it 'priceが半角数字以外' do
+      it 'priceが全角数字' do
         @item.price = '１２３４５'
         @item.valid?
         expect(@item.errors.full_messages).to include('Price Half-width number')
       end
+      it 'priceが半角英字' do
+        @item.price = 'abc'
+        @item.valid?
+        expect(@item.errors.full_messages).to include('Price Out of settintg range')
+      end
+      it 'priceが半角英数字の混合' do
+        @item.price = '300abc'
+        @item.valid?
+        expect(@item.errors.full_messages).to include('Price Half-width number')
+      end
       it 'priceが300未満' do
-        @item.price = '299'
+        @item.price = 299
         @item.valid?
         expect(@item.errors.full_messages).to include('Price Out of settintg range')
       end
       it 'priceが10,000,000以上' do
-        @item.price = '10000000'
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include('Price Out of settintg range')
       end
