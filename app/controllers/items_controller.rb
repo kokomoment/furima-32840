@@ -50,6 +50,6 @@ class ItemsController < ApplicationController
   end
 
   def confirmation_user_id
-    redirect_to :index if @item.user.id == current_user.id
+    redirect_to action: :index if @item.user.id == current_user.id
   end
 end
