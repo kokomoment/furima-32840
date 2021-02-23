@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    redirect_to root_path
+    redirect_to root_path if @item.destory
  end
 
   private
@@ -50,7 +50,6 @@ class ItemsController < ApplicationController
   end
 
   def confirmation_user_id
-    if @item.user.id == current_user.id
-    end
+    redirect_to :index if @item.user.id == current_user.id
   end
 end
