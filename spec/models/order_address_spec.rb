@@ -67,10 +67,9 @@ describe OrderAddress do
         expect(@order_address.errors.full_messages).to include('Phone number Input only number')
       end
 
-      it 'phone_numberが10桁未満' do
-        @order_address.phone_number = '123456789'
+      it 'phone_numberが12桁以上' do
+        @order_address.phone_number = '012345678912'
         @order_address.valid?
-        binding.pry
         expect(@order_address.errors.full_messages).to include('Phone number Input only number')
       end
 
