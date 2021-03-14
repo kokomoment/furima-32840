@@ -12,6 +12,11 @@ describe OrderAddress do
       it 'すべての値が正しく入力されており、tokenがあれば保存できる' do
         expect(@order_address).to be_valid
       end
+
+      it '建物名がなくても保存できる' do
+        @order_address.building = nil
+        expect(@order_address).to be_valid
+      end
     end
 
     context '商品購入情報の保存がうまくいかないとき' do
