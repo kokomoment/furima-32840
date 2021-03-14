@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe OrderAddress do
   before do
+    @user = FactoryBot.build(:user)
+    @item = FactoryBot.build(:item)
     @order_address = FactoryBot.build(:order_address)
   end
 
