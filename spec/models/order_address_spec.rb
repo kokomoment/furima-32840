@@ -81,6 +81,12 @@ describe OrderAddress do
         expect(@order_address.errors.full_messages).to include('Phone number Input only number')
       end
 
+      it 'phone_numberにハイフンがある' do
+        @order_address.phone_number = '090-1111-2222'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include('Phone number Input only number')
+      end
+
       it 'tokenが空' do
         @order_address.token = nil
         @order_address.valid?
