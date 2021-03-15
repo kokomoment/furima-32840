@@ -75,6 +75,12 @@ describe OrderAddress do
         expect(@order_address.errors.full_messages).to include('Phone number Input only number')
       end
 
+      it 'phone_numberが英数字混合' do
+        @order_address.phone_number = '123456abc'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include('Phone number Input only number')
+      end
+
       it 'phone_numberが12桁以上' do
         @order_address.phone_number = '012345678912'
         @order_address.valid?
