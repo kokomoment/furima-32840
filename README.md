@@ -51,14 +51,15 @@
 
 ## addressesテーブル
 
-  Column       | Type       | Options     |
- ------------- | ---------- | ----------- |
- postcode      | string     | null: false |
- prefecture_id | integer    | null: false |
- city          | string     | null: false |
- block         | string     | null: false |
- building      | string     |             |
- phone_number  | string     | null: false |
+  Column       | Type       | Options           |
+ ------------- | ---------- | ----------------- |
+ postcode      | string     | null: false       |
+ prefecture_id | integer    | null: false       |
+ city          | string     | null: false       |
+ block         | string     | null: false       |
+ building      | string     |                   |
+ phone_number  | string     | null: false       |
+ order         | references | foreign_key: true |
 
 ## Association
 
