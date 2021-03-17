@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :confirmation_user_id, only: [:update, :destroy]
+  before_action :confirmation_user_id, only: [:edit, :update, :destroy]
   before_action :sold_out_item, only: [:edit, :update]
 
   def index
@@ -25,7 +25,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    redirect_to action: :index unless @item.user.id == current_user.id
   end
 
   def update
@@ -51,7 +50,7 @@ class ItemsController < ApplicationController
   end
 
   def confirmation_user_id
-    redirect_to action: :index if @item.user.id == current_user.id
+    redirect_to action: :index unless @item.user.id == current_user.id
   end
 
   def sold_out_item
