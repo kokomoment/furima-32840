@@ -18,6 +18,7 @@ class Item < ApplicationRecord
                     numericality: { only_integer: true, message: 'Half-width number' }
 
   belongs_to :user
+  has_one :order
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
